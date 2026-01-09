@@ -123,7 +123,7 @@ body::after {
     position: relative;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: left;
 }
 
 /* ===== BOTONES DE COLOR ===== */
@@ -135,10 +135,12 @@ body::after {
     cursor: pointer;
     border: 3px solid transparent;
     transition: 0.5s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .boton:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
 }
 
 .boton:active {
@@ -245,6 +247,10 @@ body::after {
         padding: 15px;
     }
 
+    body::before {
+        display: none;
+    }
+
     body::after {
         font-size: 60px;
     }
@@ -274,10 +280,17 @@ body::after {
     .boton {
         width: 50px;
         height: 50px;
+        justify-content: center;
     }
 
     .boton-compra {
         padding: 6px 12px;
         font-size: 12px;
+    }
+
+    .contenedor-botones {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
     }
 }
