@@ -1,341 +1,152 @@
+/* ===== ESTILOS GLOBALES ===== */
+
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     color: red;
     font-size: 48px;
     margin: 20px 0;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-}
-
-body {
-    margin: 0;
-    /* Espaciamentos*/
-    padding: 0;
-    /* Espaciamentos*/
-    background: #ccee66;
-    /* Color de Fondo*/
+h4 {
     color: white;
-    /* Color de Texto*/
-    padding: 20px 160px;
-    /* Espaciamentos*/
-    height: 100vh;
-    /* Altura de la pantalla*/
-    overflow: hidden;
-    /* Para que no aparezca la barra de desplazamiento*/
-    box-sizing: border-box;
-}
-
-/* Responsive para tablets */
-@media (max-width: 1024px) {
-    body {
-        padding: 20px 80px;
-    }
-}
-
-/* Responsive para dispositivos pequeños */
-@media (max-width: 768px) {
-    body {
-        padding: 20px 30px;
-        height: auto;
-        overflow: auto;
-    }
-}
-
-/* Responsive para móviles */
-@media (max-width: 480px) {
-    body {
-        padding: 15px;
-    }
-}
-
-body::before {
-    content: '';
-    /* para crear un elemento antes del body*/
-    background: #050505ea;
-    /* Color de Fondo*/
-    width: 100%;
-    /* Ancho*/
-    height: 120%;
-    /* Altura*/
-    position: absolute;
-    /* Para que el elemento no afecte al layout*/
-    top: 0;
-    /* Posición superior*/
-    left: -600px;
-    /* Posición */
-    transform: rotate(-70deg);
-    /* Rotación*/
-}
-
-body::after {
-    content: 'Nike';
-    /* para crear un elemento después del body*/
-    position: absolute;
-    /* Para que el elemento no afecte al layout*/
-    top: 50%;
-    /* Posición superior*/
-    left: 50%;
-    /* Posición izquierda*/
-    transform: translate(-50%, -50%);
-    /* Para centrar el elemento*/
-    color: black;
-    font-size: 200px;
-    /* Tamaño de fuente*/
-    font-weight: 900;
-    /* Grosor de fuente*/
-    font-family: "Noto Sans", sans-serif;
-    /* Tipo de fuente*/
-    opacity: 0.5;
-    /* Opacidad*/
-
-}
-
-@media (max-width: 768px) {
-    body::after {
-        font-size: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    body::after {
-    line-height: 1.5;
     font-size: 24px;
     margin: 10px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    h4 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    h4 {
-        font-size: 18px;
-    }
-@media (max-width: 768px) {
-    p {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    p {
-        font-size: 14px;
-        margin-bottom: 20px;
-           font-size: 60px;
-           } 
-    }
 }
 
 p {
     color: white;
-    width: 800px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    padding: 20px 160px;
+    background: #ccee66;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body::before {
+    content: '';
+    background: #050505ea;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 0;
+    left: -600px;
+    transform: rotate(-70deg);
+}
+
+body::after {
+    content: 'Nike';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 200px;
+    font-weight: 900;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* ===== LOGO ===== */
+
+.logo {
+    width: 80px;
     height: auto;
     z-index: 2;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        width: 50px;
-        transform: rotate(-25deg);
-        filter: drop-shadow(21px 22px 38px rgb(16, 16, 16));
-        transition: 1s;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .imagem-tenis {
-        width: 500px;
-    }
-}
-
-@media (max-width: 768px) {
-    .imagem-tenis {
-    font-size: 16px;
-    border: none;
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
-    .boton-compra {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .boton-compra {
-        padding: 6px 12px;
-        font-size: 12px;
-    }    }
-}
-
-@media (max-width: 480px) {
-    .imagem-tenis {
-        width: 250px;
-        transform: rotate(-25deg) scale(0.8);
-    
-    }
-    /* margin-left => izquierda*/
-    /* margin-right => derecha*/
-
-}
-
-h4 {
-    color: white;
-}
-
-.logo {
-    width: 80px;
-    z-index: 2;
-    gap: 20px;
-    flex-wrap: wrap;
-
-}
-
-@media (max-width: 768px) {
-    .logo {
-        width: 70px;
-        flex: 1;
-        min-width: 250px;
-    }
-    
-}
-
-@media (max-width: 768px) {
-    .info-tenis {
-        max-width: 100%;
-        text-align: center;
-    }
-    .contenedor-principal {
-        flex-direction: column;
-        height: auto;
-        justify-content: center;
-    }}
+/* ===== BOTÓN DE COMPRA ===== */
 
 .boton-compra {
     background: rgba(53, 250, 3, 0.952);
     padding: 10px 20px;
     border-radius: 20px;
-    /* para redondear botones*/
     color: black;
-    justify-content: center;
-}
-
-@media (max-width: 768px) {
-    .contenedor-botones {
-        margin-top: 30px;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-    /* para que el cambio de color sea mas lento*/
-
-}
-
-@media (max-width: 768px) {
-    .boton {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .boton {
-        width: 50px;
-        height: 50px;
-    }
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+    border: none;
+    display: inline-block;
 }
 
 .boton-compra:hover {
     opacity: 0.7;
-    /* para que el boton se vea mas claro*/
-
 }
 
-/* esta opción hace que acontezca un cambio en nuestro boton al señalarlo*/
+/* ===== IMAGEN DEL ZAPATO ===== */
 
-
-.imagem-tenis{
+.imagem-tenis {
     width: 800px;
+    height: auto;
     transform: rotate(-25deg);
-    filter: drop-shadow(21px 22px 38px  rgb(16, 16, 16));
+    filter: drop-shadow(21px 22px 38px rgb(16, 16, 16));
     transition: 1s;
+    max-width: 100%;
 }
 
 .cambio-efecto {
     opacity: 0;
     transform: rotate(-25deg) translateY(-30px);
- 
 }
+
+/* ===== CONTENEDORES ===== */
 
 .contenedor-principal {
     display: flex;
-    /* para que los elementos esten en fila*/
     justify-content: space-between;
-    /* para que los elementos esten separados*/
     align-items: center;
-    /* para que los elementos esten centrados verticalmente*/
     height: 75%;
-    /* para que el contenedor ocupe toda la altura de la pantalla*/
     position: relative;
-    /* para que el contenedor no afecte al layout*/
     z-index: 1;
-    /* para que el contenedor este por encima del fondo*/
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .info-tenis {
     max-width: 800px;
-    /* para que el texto no ocupe toda la pantalla*/
+    flex: 1;
+    min-width: 250px;
 }
 
 .contenedor-botones {
     z-index: 2;
     position: relative;
-    display: flex;/* para que los elementos esten en fila*/
-    gap: 20px; /* para que haya un espacio entre los botones*/
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
+/* ===== BOTONES DE COLOR ===== */
 
 .boton {
     width: 80px;
     height: 80px;
     border-radius: 70%;
     cursor: pointer;
-    border: 3px;
-    transform: rotateY('angle');
-    transition: 0.5s; /* para que el cambio de color sea mas lento*/
-
+    border: 3px solid transparent;
+    transition: 0.5s;
 }
 
 .boton:hover {
-    transform: translateY(-5px);/* para que el boton suba al señalarlo*/
-    transition: transform 0.3s;/* para que el cambio de color sea mas lento*/
+    transform: translateY(-5px);
 }
+
 .boton:active {
-    opacity: 0.7; /* para que el boton se vea mas claro al hacer click*/
+    opacity: 0.7;
 }
+
 .verde {
     background: #ccee66;
-
 }
 
 .azul {
@@ -344,5 +155,120 @@ h4 {
 
 .rosa {
     background: #ff9eb5;
+}
 
+/* ===== RESPONSIVE - TABLETS (max-width: 1024px) ===== */
+
+@media (max-width: 1024px) {
+    body {
+        padding: 20px 80px;
+    }
+
+    .imagem-tenis {
+        width: 500px;
+    }
+}
+
+/* ===== RESPONSIVE - TABLETS/DISPOSITIVOS PEQUEÑOS (max-width: 768px) ===== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 30px;
+        height: auto;
+        overflow: auto;
+    }
+
+    body::after {
+        font-size: 100px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .imagem-tenis {
+        width: 350px;
+    }
+
+    .contenedor-principal {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+
+    .info-tenis {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contenedor-botones {
+        margin-top: 30px;
+    }
+
+    .boton {
+        width: 60px;
+        height: 60px;
+    }
+
+    .boton-compra {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* ===== RESPONSIVE - MÓVILES (max-width: 480px) ===== */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    body::after {
+        font-size: 60px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .imagem-tenis {
+        width: 250px;
+        transform: rotate(-25deg) scale(0.8);
+    }
+
+    .boton {
+        width: 50px;
+        height: 50px;
+    }
+
+    .boton-compra {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }
